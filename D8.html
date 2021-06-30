@@ -1,5 +1,4 @@
-<html>
-  <head>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
     <script>
       /* EXERCISE 1
       Write a function for changing the title of the document in something else.
@@ -14,7 +13,8 @@
       */
 
       const addClassToTitle = function () {
-        //
+        let newHeading = document.getElementsByTagName('h1')
+        newHeading.classList.add("myHeading")
       };
 
       /* EXERCISE 3
@@ -22,7 +22,8 @@
       */
 
       const changePcontent = function () {
-        //
+        let changeTextOfP = document.querySelectorAll('div .p')
+        changeTextOfP.innerText = "I got changed!"
       };
 
       /* EXERCISE 4
@@ -30,7 +31,8 @@
       */
 
       const changeUrls = function () {
-        //
+        let newLocation = document.getElementById('link')
+        newLocation.href = "https://www.google.com"
       };
 
       /* EXERCISE 5
@@ -38,7 +40,9 @@
        */
 
       const addToTheSecond = function (content) {
-        //
+        let myNewElementt = document.createElement('li')
+        myNewElementt.innerText = "x item"
+        document.getElementById("secondList").appendChild(myNewElementt)
       };
 
       /* EXERCISE 6
@@ -106,7 +110,7 @@
         color: red;
       }
     </style>
-  </head>
+  <script data-dapp-detection="">!function(){let e=!1;function n(){if(!e){const n=document.createElement("meta");n.name="dapp-detected",document.head.appendChild(n),e=!0}}if(window.hasOwnProperty("ethereum")){if(window.__disableDappDetectionInsertion=!0,void 0===window.ethereum)return;n()}else{var t=window.ethereum;Object.defineProperty(window,"ethereum",{configurable:!0,enumerable:!1,set:function(e){window.__disableDappDetectionInsertion||n(),t=e},get:function(){if(!window.__disableDappDetectionInsertion){const e=arguments.callee;e&&e.caller&&e.caller.toString&&-1!==e.caller.toString().indexOf("getOwnPropertyNames")||n()}return t}})}}();</script></head>
   <body>
     <header>
       <h1>This is the title of the page</h1>
@@ -114,7 +118,7 @@
     </header>
 
     <main>
-      <hr/>
+      <hr>
 
       <ul id="firstList">
         <li>1st</li>
@@ -128,23 +132,20 @@
         <li>3rd</li>
       </ul>
 
-      <a href="strive.school">This link goes to Strive School</a>
+      <a id="link" href="https://s3.eu-west-1.amazonaws.com/eduflow-production/activity-resources/strive.school">This link goes to Strive School</a>
 
       <div>
         <p>This text is just for the exercise</p>
       </div>
 
       <div>
-        <input
-          type="text"
-          id="input-field"
-          placeholder="input field for the exercise"
-        />
+        <input type="text" id="input-field" placeholder="input field for the exercise">
       </div>
     </main>
 
     <footer>
       <p>And this text is just for the exercise too!</p>
     </footer>
-  </body>
-</html>
+  
+
+</body></html>
