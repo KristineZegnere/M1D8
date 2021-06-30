@@ -40,9 +40,9 @@
        */
 
       const addToTheSecond = function (content) {
-        let myNewElementt = document.createElement('li')
-        myNewElementt.innerText = "x item"
-        document.getElementById("secondList").appendChild(myNewElementt)
+        let newListItem = document.createElement('li')
+        newListItem.innerText = "x item"
+        document.getElementById("secondList").appendChild(newListItem)
       };
 
       /* EXERCISE 6
@@ -50,7 +50,9 @@
       */
 
       const addParagraph = function (content) {
-        //
+        let newParagraph = document.createElement('p') 
+        document.getElementsByTagName('div').appendChild(newParagraph)
+
       };
 
       /* EXERCISE 7
@@ -58,7 +60,8 @@
       */
 
       const firstUlDisappear = function () {
-        //
+        let firstUlDisappear = document.getElementById('firstList')
+        firstUlDisappear.remove()
       };
 
       /* EXERCISE 8
